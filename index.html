@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Vis & Animation Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VisStudio.</div>
+        <ul class="nav-links">
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><button class="nav-btn">Get Started</button></li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Products with Stunning Visuals.</h1>
+            <p>Subscription-based, studio-quality 3D product visualizations and animations designed to boost your conversions.</p>
+            <div class="hero-actions">
+                <a href="#pricing" class="cta-button primary">View Plans</a>
+                <a href="#work" class="cta-button secondary">See Our Work</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="assets/hero_render.png" alt="3D Product Render" class="hero-image">
+            <div class="glow-effect"></div>
+        </div>
+    </main>
+
+    <section id="work" class="showcase-section">
+        <h2 class="section-title">A New Standard of Quality</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="img-before" style="background-image: url('assets/work_watch_before.png');"></div>
+                <div class="img-after" style="background-image: url('assets/work_watch.png');"></div>
+                <div class="overlay">
+                    <h3>Product Rendering</h3>
+                    <p>Luxury Mechanics</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-before" style="background-image: url('assets/work_arch_before.png');"></div>
+                <div class="img-after" style="background-image: url('assets/work_arch.png');"></div>
+                <div class="overlay">
+                    <h3>Architectural Vis</h3>
+                    <p>Modern Interiors</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-before" style="background-image: url('assets/work_automotive_before.png');"></div>
+                <div class="img-after" style="background-image: url('assets/work_automotive.png');"></div>
+                <div class="overlay">
+                    <h3>Automotive</h3>
+                    <p>Futuristic Concept</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-before" style="background-image: url('assets/work_abstract_before.png');"></div>
+                <div class="img-after" style="background-image: url('assets/work_abstract.png');"></div>
+                <div class="overlay">
+                    <h3>Motion Graphics</h3>
+                    <p>Abstract Particles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <div class="pricing-cards">
+            <div class="card">
+                <h3>Starter</h3>
+                <p class="price">$1,500<span>/mo</span></p>
+                <ul>
+                    <li>2 High-Res Static Renders</li>
+                    <li>Basic Environment Setup</li>
+                    <li>2 Revisions</li>
+                    <li>48-Hour Turnaround</li>
+                </ul>
+                <button class="card-btn">Subscribe</button>
+            </div>
+            <div class="card popular">
+                <div class="badge">Most Popular</div>
+                <h3>Pro Visualization</h3>
+                <p class="price">$3,500<span>/mo</span></p>
+                <ul>
+                    <li>5 High-Res Static Renders</li>
+                    <li>1 Short Loop Animation (5s)</li>
+                    <li>Custom Environments</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Prioritized Turnaround</li>
+                </ul>
+                <button class="card-btn primary">Subscribe Pro</button>
+            </div>
+            <div class="card">
+                <h3>Enterprise</h3>
+                <p class="price">Custom</p>
+                <ul>
+                    <li>Dedicated 3D Artist</li>
+                    <li>Complex Mechanical Animations</li>
+                    <li>White-glove Direction</li>
+                    <li>Full Raw Assets</li>
+                </ul>
+                <button class="card-btn secondary">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 VisStudio. Building the future of product visualization.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
