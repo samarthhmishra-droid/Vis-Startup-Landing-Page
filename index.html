@@ -5,111 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Vis & Animation Studio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Slide Up Curtain -->
+    <div class="page-transition-overlay active" id="page-overlay"></div>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
     <nav class="navbar">
         <div class="logo">VisStudio.</div>
         <ul class="nav-links">
-            <li><a href="#work">Our Work</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><button class="nav-btn">Get Started</button></li>
+            <li><a href="#work-section">Our Work</a></li>
+            <li><a href="#contact" class="nav-btn">Start a Project</a></li>
         </ul>
     </nav>
 
-    <main class="hero">
-        <div class="hero-content">
-            <h1>Elevate Your Products with Stunning Visuals.</h1>
-            <p>Subscription-based, studio-quality 3D product visualizations and animations designed to boost your conversions.</p>
-            <div class="hero-actions">
-                <a href="#pricing" class="cta-button primary">View Plans</a>
-                <a href="#work" class="cta-button secondary">See Our Work</a>
+    <main class="hero" id="hero-section">
+        <div class="hero-sticky">
+            <div class="hero-content centered">
+                <h1 id="hero-headline"></h1>
+                <div id="hero-fade-content" class="fade-hidden">
+                    <p>We create realistic 3D product models and high-end renders for brands that demand premium presentation.</p>
+                    <div class="hero-actions">
+                        <a href="#work-section" class="cta-button primary">Explore Visuals</a>
+                        <a href="#contact" class="cta-button secondary">Start a Project</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <img src="assets/hero_render.png" alt="3D Product Render" class="hero-image">
-            <div class="glow-effect"></div>
         </div>
     </main>
 
-    <section id="work" class="showcase-section">
-        <h2 class="section-title">A New Standard of Quality</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="img-before" style="background-image: url('assets/work_watch_before.png');"></div>
-                <div class="img-after" style="background-image: url('assets/work_watch.png');"></div>
-                <div class="overlay">
-                    <h3>Product Rendering</h3>
-                    <p>Luxury Mechanics</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="img-before" style="background-image: url('assets/work_arch_before.png');"></div>
-                <div class="img-after" style="background-image: url('assets/work_arch.png');"></div>
-                <div class="overlay">
-                    <h3>Architectural Vis</h3>
-                    <p>Modern Interiors</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="img-before" style="background-image: url('assets/work_automotive_before.png');"></div>
-                <div class="img-after" style="background-image: url('assets/work_automotive.png');"></div>
-                <div class="overlay">
-                    <h3>Automotive</h3>
-                    <p>Futuristic Concept</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="img-before" style="background-image: url('assets/work_abstract_before.png');"></div>
-                <div class="img-after" style="background-image: url('assets/work_abstract.png');"></div>
-                <div class="overlay">
-                    <h3>Motion Graphics</h3>
-                    <p>Abstract Particles</p>
-                </div>
-            </div>
+    <!-- Services Ticker -->
+    <div class="services-ticker">
+        <div class="ticker-track">
+            <span>3D Product Modeling</span><span class="dot">·</span>
+            <span>CGI Product Visualization</span><span class="dot">·</span>
+            <span>Premium Product Renders</span><span class="dot">·</span>
+            <span>Visual Product Presentation</span><span class="dot">·</span>
+            <span>3D Product Modeling</span><span class="dot">·</span>
+            <span>CGI Product Visualization</span><span class="dot">·</span>
+            <span>Premium Product Renders</span><span class="dot">·</span>
+            <span>Visual Product Presentation</span><span class="dot">·</span>
         </div>
-    </section>
+    </div>
 
-    <section id="pricing" class="pricing-section">
-        <h2 class="section-title">Simple, Transparent Pricing</h2>
-        <div class="pricing-cards">
-            <div class="card">
-                <h3>Starter</h3>
-                <p class="price">$1,500<span>/mo</span></p>
-                <ul>
-                    <li>2 High-Res Static Renders</li>
-                    <li>Basic Environment Setup</li>
-                    <li>2 Revisions</li>
-                    <li>48-Hour Turnaround</li>
-                </ul>
-                <button class="card-btn">Subscribe</button>
+    <div id="work-section" class="rm-projects-container">
+        <!-- Project 1 -->
+        <section class="rm-project">
+            <div class="rm-content">
+                <h2>Premium Rendering</h2>
+                <p>Luxury Mechanics</p>
+                <a href="project-mechanics.html" class="rm-btn">View Work</a>
             </div>
-            <div class="card popular">
-                <div class="badge">Most Popular</div>
-                <h3>Pro Visualization</h3>
-                <p class="price">$3,500<span>/mo</span></p>
-                <ul>
-                    <li>5 High-Res Static Renders</li>
-                    <li>1 Short Loop Animation (5s)</li>
-                    <li>Custom Environments</li>
-                    <li>Unlimited Revisions</li>
-                    <li>Prioritized Turnaround</li>
-                </ul>
-                <button class="card-btn primary">Subscribe Pro</button>
+            <div class="rm-visual">
+                <div class="rm-image" style="background-image: url('assets/work_watch.png');"></div>
             </div>
-            <div class="card">
-                <h3>Enterprise</h3>
-                <p class="price">Custom</p>
-                <ul>
-                    <li>Dedicated 3D Artist</li>
-                    <li>Complex Mechanical Animations</li>
-                    <li>White-glove Direction</li>
-                    <li>Full Raw Assets</li>
-                </ul>
-                <button class="card-btn secondary">Contact Us</button>
+            <div class="rm-watermark">MECHANICS</div>
+        </section>
+
+
+        <!-- Project 2 -->
+        <section class="rm-project">
+            <div class="rm-content">
+                <h2>CGI Environments</h2>
+                <p>Modern Interiors</p>
+                <a href="project-interiors.html" class="rm-btn">View Work</a>
             </div>
-        </div>
+            <div class="rm-visual">
+                <div class="rm-image" style="background-image: url('assets/work_arch.png');"></div>
+            </div>
+            <div class="rm-watermark">INTERIORS</div>
+        </section>
+
+        <!-- Project 3 -->
+        <section class="rm-project">
+            <div class="rm-content">
+                <h2>3D Concept Models</h2>
+                <p>Futuristic Concept</p>
+                <a href="project-automotive.html" class="rm-btn">View Work</a>
+            </div>
+            <div class="rm-visual">
+                <div class="rm-image" style="background-image: url('assets/work_automotive.png');"></div>
+            </div>
+            <div class="rm-watermark">AUTOMOTIVE</div>
+        </section>
+
+        <!-- Project 4 -->
+        <section class="rm-project">
+            <div class="rm-content">
+                <h2>CGI Animation</h2>
+                <p>Abstract Particles</p>
+                <a href="project-abstract.html" class="rm-btn">View Work</a>
+            </div>
+            <div class="rm-visual">
+                <div class="rm-image" style="background-image: url('assets/work_abstract.png');"></div>
+            </div>
+            <div class="rm-watermark">MOTION</div>
+        </section>
+    </div>
+
+    <section id="contact" class="contact-section" style="padding: 8rem 5%; text-align: center; background: linear-gradient(to bottom, transparent, rgba(201, 169, 110, 0.05));">
+        <h2 class="section-title">Bring It to <em style="font-style: italic; color: var(--accent-primary);">Life.</em></h2>
+        <p style="color: var(--text-muted); font-size: 1.25rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Tell us about your product. We'll show you what it could look like at its absolute best.</p>
+        <a href="mailto:hello@visstudio.com" class="cta-button primary">Start a Project</a>
     </section>
 
     <footer class="footer">
@@ -117,7 +116,72 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation
+        let scrollTimeout;
+        let autoScrollTimeout;
+        const autoScrollDelay = 2500;
+        const rmProjectsArray = document.querySelectorAll('.rm-project');
+
+        window.addEventListener('scroll', () => {
+            // Instantly cancel automated slideshow if the user is actively exploring
+            clearTimeout(autoScrollTimeout);
+            clearTimeout(scrollTimeout);
+
+            // Wait 200ms after user stops scrolling to re-evaluate their position
+            scrollTimeout = setTimeout(() => {
+                let currentProject = null;
+                
+                // Track which project is strictly locked at the top of the viewport
+                rmProjectsArray.forEach(project => {
+                    const rect = project.getBoundingClientRect();
+                    if (rect.top <= 5 && rect.bottom > 5) {
+                        currentProject = project;
+                    }
+                });
+
+                // If perfectly parked on a project, set the slideshow timer
+                if (currentProject) {
+                    const nextProject = currentProject.nextElementSibling;
+                    if (nextProject && nextProject.classList.contains('rm-project')) {
+                        autoScrollTimeout = setTimeout(() => {
+                            const nextTop = window.scrollY + nextProject.getBoundingClientRect().top;
+                            window.scrollTo({
+                                top: nextTop,
+                                behavior: 'smooth'
+                            });
+                        }, autoScrollDelay);
+                    }
+                }
+            }, 200);
+        });
+
+        // Page Transition Exit
+        const overlay = document.getElementById('page-overlay');
+        window.addEventListener('load', () => {
+            // Slide it up to reveal
+            overlay.classList.add('exit');
+            setTimeout(() => {
+                overlay.classList.remove('active', 'exit');
+            }, 1200);
+        });
+
+        // Intercept navigation
+        document.querySelectorAll('.rm-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const targetUrl = e.currentTarget.href;
+                // Only intercept actual new pages
+                if(targetUrl && targetUrl.indexOf('#') === -1) {
+                    e.preventDefault();
+                    overlay.classList.add('active'); // slide up to cover
+                    
+                    // Route to new page after cover
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 1200);
+                }
+            });
+        });
+
+        // Smooth scrolling for native anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -126,6 +190,71 @@
                 });
             });
         });
+
+        const cursor = document.getElementById('cursor');
+        const ring = document.getElementById('cursorRing');
+        let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+        document.addEventListener('mousemove', e => { 
+            mx = e.clientX; 
+            my = e.clientY; 
+            cursor.style.left = mx + 'px'; 
+            cursor.style.top = my + 'px'; 
+        });
+        function animateRing() { 
+            rx += (mx - rx) * 0.12; 
+            ry += (my - ry) * 0.12; 
+            ring.style.left = rx + 'px'; 
+            ring.style.top = ry + 'px'; 
+            requestAnimationFrame(animateRing); 
+        }
+        animateRing();
+        document.querySelectorAll('a, button, .rm-btn').forEach(el => {
+            el.addEventListener('mouseenter', () => { 
+                cursor.style.width = '20px'; 
+                cursor.style.height = '20px'; 
+                ring.style.width = '60px'; 
+                ring.style.height = '60px'; 
+                ring.style.borderColor = 'var(--accent-primary)'; 
+            });
+            el.addEventListener('mouseleave', () => { 
+                cursor.style.width = '10px'; 
+                cursor.style.height = '10px'; 
+                ring.style.width = '36px'; 
+                ring.style.height = '36px'; 
+                ring.style.borderColor = 'var(--accent-glow)'; 
+            });
+        });
+
+        const heroSection = document.getElementById('hero-section');
+        const heroHeadline = document.getElementById('hero-headline');
+        const heroFadeContent = document.getElementById('hero-fade-content');
+        const headlineText = "Turning Products Into Premium Visuals.";
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let windowHeight = window.innerHeight;
+
+            if(heroSection && heroHeadline) {
+                let heroTop = heroSection.offsetTop;
+                let heroHeight = heroSection.offsetHeight;
+                let heroDistance = heroHeight - windowHeight;
+                if (heroDistance <= 0) heroDistance = 1;
+
+                let heroProgress = (scrollTop - heroTop) / heroDistance;
+                heroProgress = Math.max(0, Math.min(1, heroProgress));
+                
+                let charCount = Math.floor(heroProgress * headlineText.length);
+                heroHeadline.textContent = headlineText.substring(0, charCount);
+                
+                if (heroProgress >= 1) {
+                    heroFadeContent.classList.add('fade-visible');
+                } else {
+                    heroFadeContent.classList.remove('fade-visible');
+                }
+            }
+        });
+        
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>

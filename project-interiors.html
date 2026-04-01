@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interiors - VisStudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-transition-overlay active" id="page-overlay"></div>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav class="navbar">
+        <div class="logo">VisStudio.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Our Work</a></li>
+            <li><a href="index.html#contact" class="nav-btn">Start a Project</a></li>
+        </ul>
+    </nav>
+
+    <div style="min-height: 100vh; padding-top: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 style="font-size: 5vw; margin-bottom: 1rem; font-weight: 300; text-align: center;">Modern Interiors</h1>
+        <p style="color: var(--accent-primary); letter-spacing: 4px; text-transform: uppercase;">Architectural Visualization</p>
+        
+        <div style="width: 80%; max-width: 1200px; margin-top: 4rem; position: relative;">
+            <img src="assets/work_arch.png" style="width: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(139,92,246,0.1);" alt="modern interiors">
+        </div>
+        
+        <a href="index.html" class="rm-btn" style="margin-top: 5rem; margin-bottom: 5rem;">&larr; Back to Portfolio</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 VisStudio.</p>
+    </footer>
+
+    <script>
+        const overlay = document.getElementById('page-overlay');
+        window.addEventListener('load', () => {
+            overlay.classList.add('exit');
+            setTimeout(() => {
+                overlay.classList.remove('active', 'exit');
+            }, 1200);
+        });
+
+        document.querySelectorAll('a').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const targetUrl = e.currentTarget.href;
+                const currentPath = window.location.pathname;
+                const linkPath = e.currentTarget.pathname;
+                
+                if(targetUrl && !targetUrl.startsWith('mailto:') && linkPath !== currentPath) {
+                    e.preventDefault();
+                    overlay.classList.add('active');
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 1200);
+                }
+            });
+        });
+        
+        const cursor = document.getElementById('cursor');
+        const ring = document.getElementById('cursorRing');
+        let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+        document.addEventListener('mousemove', e => { 
+            mx = e.clientX; 
+            my = e.clientY; 
+            cursor.style.left = mx + 'px'; 
+            cursor.style.top = my + 'px'; 
+        });
+        function animateRing() { 
+            rx += (mx - rx) * 0.12; 
+            ry += (my - ry) * 0.12; 
+            ring.style.left = rx + 'px'; 
+            ring.style.top = ry + 'px'; 
+            requestAnimationFrame(animateRing); 
+        }
+        animateRing();
+        document.querySelectorAll('a, button, .rm-btn').forEach(el => {
+            el.addEventListener('mouseenter', () => { 
+                cursor.style.width = '20px'; 
+                cursor.style.height = '20px'; 
+                ring.style.width = '60px'; 
+                ring.style.height = '60px'; 
+                ring.style.borderColor = 'var(--accent-primary)'; 
+            });
+            el.addEventListener('mouseleave', () => { 
+                cursor.style.width = '10px'; 
+                cursor.style.height = '10px'; 
+                ring.style.width = '36px'; 
+                ring.style.height = '36px'; 
+                ring.style.borderColor = 'var(--accent-glow)'; 
+            });
+        });
+    </script>
+</body>
+</html>
